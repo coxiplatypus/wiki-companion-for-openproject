@@ -1,0 +1,12 @@
+# Compatibility Matrix
+
+| Area | Firefox | Chromium | Safari |
+| --- | --- | --- | --- |
+| Manifest support | Implemented and released | Overlay available | Not configured for release |
+| Wiki TOC auto-collapse | Implemented and validated | Shared logic available | Shared logic available |
+| Options + popup UI | Implemented | Shared UI available | Shared UI available |
+| Packaging automation | Implemented (`package:firefox`) | Build-only today | Future work |
+
+## Selector Compatibility
+
+Behavior is selector-based and can require updates when OpenProject DOM/class names change.

@@ -1,0 +1,9 @@
+# Overview: Everything listed here is local-only or generated and should not be committed.
+node_modules/
+dist/
+artifacts/
+playwright-report/
+test-results/
+coverage/
+.playwright/
+.local/

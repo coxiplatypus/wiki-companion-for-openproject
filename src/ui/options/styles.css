@@ -1,0 +1,112 @@
+/* Overview: Styles for the options page layout, spacing, and form controls. */
+:root {
+  color-scheme: light;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(150deg, #f6f6f6 0%, #eef4ff 100%);
+  color: #1a1f2e;
+}
+
+.layout {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: #44506b;
+}
+
+.panel {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #d9dff0;
+  box-shadow: 0 8px 18px rgba(20, 48, 117, 0.06);
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #c8d1ea;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  flex: 1 1 300px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 14px;
+  background: #1f5ea8;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #194d8a;
+}
+
+.origin-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.origin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #dbe3f7;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.origin-item code {
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  color: #60708f;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.status {
+  min-height: 18px;
+  color: #194d8a;
+  margin-top: 10px;
+}

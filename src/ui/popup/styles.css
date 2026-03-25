@@ -1,0 +1,81 @@
+/* Overview: Styles for the popup panel and its compact controls. */
+:root {
+  color-scheme: light;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: linear-gradient(145deg, #f6f8fc 0%, #eef3ff 100%);
+  color: #1d2233;
+}
+
+.popup {
+  padding: 12px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.origin-label {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #435172;
+  overflow-wrap: anywhere;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.switch input[type="number"] {
+  width: 70px;
+  margin-left: auto;
+  border: 1px solid #c8d1ea;
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #1f5ea8;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #194d8a;
+}
+
+button.secondary {
+  background: #3e4f76;
+}
+
+button.secondary:hover {
+  background: #2f3d5d;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.status {
+  min-height: 16px;
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #194d8a;
+}

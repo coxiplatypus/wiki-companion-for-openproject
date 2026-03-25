@@ -1,0 +1,45 @@
+{
+  "name": "wiki-companion-for-openproject",
+  "version": "0.2.0",
+  "description": "Firefox-first WebExtension to improve OpenProject wiki navigation behavior.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist artifacts",
+    "stash:local": "mkdir -p .local && for d in dist test-results .playwright playwright-report coverage; do if [ -e \"$d\" ]; then mv \"$d\" .local/$d; fi; done",
+    "clean:local": "rm -rf .local",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.js,.mjs",
+    "test": "npm run test:unit",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "build:assets": "node scripts/build-extension.mjs",
+    "build:manifest:firefox": "node scripts/build-manifest.mjs --target firefox",
+    "build:manifest:chromium": "node scripts/build-manifest.mjs --target chromium",
+    "build:firefox": "npm run clean && npm run build:assets && npm run build:manifest:firefox",
+    "build:chromium": "npm run clean && npm run build:assets && npm run build:manifest:chromium",
+    "package:firefox": "npm run build:firefox && node scripts/package-extension.mjs --target firefox"
+  },
+  "keywords": [
+    "openproject",
+    "webextension",
+    "firefox-extension"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "webextension-polyfill": "^0.12.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.3.0",
+    "@types/webextension-polyfill": "^0.12.3",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "esbuild": "^0.25.9",
+    "eslint": "^9.34.0",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

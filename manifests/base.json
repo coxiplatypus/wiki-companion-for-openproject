@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Wiki Companion for OpenProject",
+  "description": "Keep OpenProject wiki TOC focused with reliable auto-collapse controls.",
+  "version": "0.2.0",
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "tabs", "scripting"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_title": "Wiki Companion for OpenProject",
+    "default_popup": "ui/popup/index.html"
+  },
+  "options_ui": {
+    "page": "ui/options/index.html",
+    "open_in_tab": true
+  }
+}

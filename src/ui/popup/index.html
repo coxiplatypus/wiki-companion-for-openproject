@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- Overview: Static popup markup; main.ts wires button clicks and setting updates. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wiki Companion for OpenProject</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1>Wiki Companion for OpenProject</h1>
+      <p id="origin-label" class="origin-label">Checking current tab...</p>
+
+      <button id="allow-origin-button" type="button" class="full-width">Allow This Origin</button>
+
+      <label class="switch">
+        <input id="site-wiki-toggle" type="checkbox" />
+        <span>Wiki TOC auto-collapse on this site</span>
+      </label>
+
+      <label class="switch">
+        <span>Wiki tree keep-open depth</span>
+        <input id="wiki-depth-input" type="number" min="1" step="1" />
+      </label>
+
+      <button id="open-options-button" type="button" class="secondary full-width">Open Options</button>
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

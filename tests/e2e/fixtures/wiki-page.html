@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- Overview: Minimal OpenProject-like wiki sidebar fixture used by automated E2E tests. -->
+<html lang="en">
+  <body>
+    <div class="menu-wiki-pages-tree tree-menu--container" data-controller="menus--subtree">
+      <ul class="pages-hierarchy -with-hierarchy">
+        <li class="-hierarchy-expanded">
+          <span class="tree-menu--item" slug="overview">
+            <a class="tree-menu--title" href="/projects/demo/wiki/overview">Overview</a>
+          </span>
+          <ul class="-with-hierarchy">
+            <li class="-hierarchy-expanded">
+              <span class="tree-menu--item" slug="sub-a">
+                <a class="tree-menu--title" href="/projects/demo/wiki/overview/sub-a">Sub A</a>
+              </span>
+            </li>
+            <li class="-hierarchy-expanded">
+              <span class="tree-menu--item -selected" slug="sub-b">
+                <a class="tree-menu--title" href="/projects/demo/wiki/overview/sub-b" aria-current="page">Sub B</a>
+              </span>
+              <ul class="-with-hierarchy">
+                <li class="-hierarchy-expanded">
+                  <span class="tree-menu--item" slug="child">
+                    <a class="tree-menu--title" href="/projects/demo/wiki/overview/sub-b/child">Child</a>
+                  </span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

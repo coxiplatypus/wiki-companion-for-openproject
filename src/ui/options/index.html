@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- Overview: Static markup for the Options page; interactive behavior is implemented in main.ts. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wiki Companion for OpenProject - Options</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <h1>Wiki Companion for OpenProject</h1>
+      <p class="subtitle">
+        Configure which OpenProject sites are enabled and how the companion behaves.
+      </p>
+
+      <section class="panel">
+        <h2>Allowed OpenProject Origins</h2>
+        <form id="add-origin-form" class="row">
+          <input
+            id="origin-input"
+            type="text"
+            autocomplete="off"
+            placeholder="https://openproject.example.com"
+          />
+          <button type="submit">Add Origin</button>
+        </form>
+        <ul id="allowed-origin-list" class="origin-list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Default Behavior</h2>
+        <label class="switch">
+          <input id="wiki-toc-toggle" type="checkbox" />
+          <span>Enable Wiki TOC auto-collapse</span>
+        </label>
+        <label class="switch">
+          <input id="diagnostics-toggle" type="checkbox" />
+          <span>Show diagnostics notice when selectors break</span>
+        </label>
+        <label class="switch">
+          <span>Wiki tree keep-open depth</span>
+          <input id="wiki-depth-input" type="number" min="1" step="1" />
+        </label>
+      </section>
+
+      <section class="panel">
+        <h2>Disclaimer</h2>
+        <p>
+          This extension is not affiliated with the OpenProject Foundation. It modifies UI behavior locally in
+          your browser only.
+        </p>
+      </section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
