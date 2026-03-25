@@ -27,6 +27,32 @@ For beginner local testing steps and Firefox artifact usage, see `docs/local-tes
 - Do not introduce remote-code execution patterns.
 - Keep permissions minimal and justify any new permission in the PR description.
 
+## Keeping History Linear (Rebase Workflow)
+
+The default branch is protected with linear-history rules. Update your feature branch with rebase before opening or updating a PR:
+
+```bash
+git fetch origin
+git checkout <your-branch>
+git rebase origin/main
+```
+
+If conflicts appear:
+
+```bash
+# edit files to resolve conflicts
+git add <resolved-file>
+git rebase --continue
+```
+
+After a successful rebase, update your remote branch:
+
+```bash
+git push --force-with-lease
+```
+
+Use `--force-with-lease` only on your own feature branch, never on `main`.
+
 ## Commit Message Style
 
 Use clear, imperative subject lines, for example:
