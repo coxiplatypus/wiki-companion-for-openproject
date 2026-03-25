@@ -1,6 +1,6 @@
 # Wiki Companion for OpenProject
 
-> Disclaimer: This repository includes code generated with LLM assistance and reviewed/edited by maintainers before release.
+> Disclaimer: This repository includes code generated with LLM assistance.
 
 Firefox-first WebExtension that keeps the OpenProject wiki tree focused by auto-collapsing non-active branches with predictable keep-open depth.
 
