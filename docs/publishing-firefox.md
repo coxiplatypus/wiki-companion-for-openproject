@@ -8,6 +8,8 @@ This project is currently shipped Firefox-first.
 npm run package:firefox
 ```
 
+The packaging command includes a Firefox manifest guard (`npm run validate:manifest:firefox`) before ZIP creation.
+
 Expected output:
 
 - `artifacts/wiki-companion-for-openproject-firefox-v<version>.zip`
@@ -41,9 +43,11 @@ Document why each permission is required in AMO listing notes:
 ## 4) Submission Checklist
 
 - Run lint, typecheck, and unit tests before upload.
+- Ensure Firefox manifest guard passes (`npm run validate:manifest:firefox`) on the built artifact.
 - Confirm manifest version/name/description and extension id are correct.
 - Verify no remote code loading and no telemetry.
 - Verify only intended OpenProject wiki behavior is present.
+- Confirm AMO validator reports no warnings for the submission ZIP.
 - Upload ZIP to AMO and address reviewer feedback.
 
 ## 5) Post-Publish Checks

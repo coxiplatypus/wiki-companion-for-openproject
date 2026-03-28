@@ -72,6 +72,7 @@ npm run stash:local
 ### Root Policies and Community Docs
 
 - [Contributing](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
 - [Privacy Notice](PRIVACY.md)
 - [Disclaimer](DISCLAIMER.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)

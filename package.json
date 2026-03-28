@@ -1,6 +1,6 @@
 {
   "name": "wiki-companion-for-openproject",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Firefox-first WebExtension to improve OpenProject wiki navigation behavior.",
   "private": true,
   "type": "module",
@@ -16,9 +16,10 @@
     "build:assets": "node scripts/build-extension.mjs",
     "build:manifest:firefox": "node scripts/build-manifest.mjs --target firefox",
     "build:manifest:chromium": "node scripts/build-manifest.mjs --target chromium",
+    "validate:manifest:firefox": "node scripts/validate-firefox-manifest.mjs",
     "build:firefox": "npm run clean && npm run build:assets && npm run build:manifest:firefox",
     "build:chromium": "npm run clean && npm run build:assets && npm run build:manifest:chromium",
-    "package:firefox": "npm run build:firefox && node scripts/package-extension.mjs --target firefox"
+    "package:firefox": "npm run build:firefox && npm run validate:manifest:firefox && node scripts/package-extension.mjs --target firefox"
   },
   "keywords": [
     "openproject",

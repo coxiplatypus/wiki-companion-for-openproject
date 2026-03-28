@@ -32,7 +32,7 @@ jobs:
       - name: Unit tests
         run: npm run test:unit
 
-      - name: Build and package Firefox target
+      - name: Build, validate manifest, and package Firefox target
         run: npm run package:firefox
 
       - name: Upload Firefox artifact

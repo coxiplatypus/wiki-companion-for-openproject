@@ -5,7 +5,7 @@ import tsPlugin from "@typescript-eslint/eslint-plugin";
 
 export default [
   {
-    ignores: ["dist/**", "artifacts/**", "node_modules/**"]
+    ignores: ["dist/**", "artifacts/**", ".local/**", "node_modules/**"]
   },
   js.configs.recommended,
   {
