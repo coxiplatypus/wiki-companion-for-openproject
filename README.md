@@ -23,6 +23,49 @@ Packaged artifact:
 
 - `artifacts/wiki-companion-for-openproject-firefox-v<version>.zip`
 
+## AMO Source Build Instructions
+
+These instructions are included for Mozilla AMO source review.
+
+### Operating System and Build Environment
+
+- Linux (x86_64) or macOS with a POSIX shell (`bash`).
+- Windows is supported via WSL2 (Ubuntu recommended).
+- Network access is required for dependency installation.
+
+### Required Programs and Versions
+
+- Node.js `22.x`
+- npm `10.x` (bundled with Node.js 22)
+- `zip` CLI utility (used by the packaging script)
+
+Install references:
+
+- Node.js and npm: https://nodejs.org/
+- Ubuntu/Debian `zip`: `sudo apt-get install zip`
+- macOS `zip`: included by default in recent versions
+
+### Step-by-Step Rebuild
+
+Use the exact commands below from the repository root:
+
+```bash
+npm ci
+npm run package:firefox
+```
+
+This executes the repository build scripts in `scripts/` and produces:
+
+- `artifacts/wiki-companion-for-openproject-firefox-v<version>.zip`
+
+Optional local verification:
+
+```bash
+npm run lint
+npm run typecheck
+npm run test:unit
+```
+
 ## Local-Only Files
 
 - Use `.local/` for anything private or machine-specific.
