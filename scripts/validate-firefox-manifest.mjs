@@ -23,13 +23,19 @@ const gecko = manifest.browser_specific_settings?.gecko;
 if (!gecko) {
   errors.push("Expected browser_specific_settings.gecko to be present.");
 } else {
-  if (Object.hasOwn(gecko, "data_collection_permissions")) {
-    errors.push("Firefox manifest must not include gecko.data_collection_permissions.");
+  const dataCollectionPermissions = gecko.data_collection_permissions;
+  if (!dataCollectionPermissions || typeof dataCollectionPermissions !== "object") {
+    errors.push("Expected gecko.data_collection_permissions to be present.");
+  } else {
+    const required = dataCollectionPermissions.required;
+    if (!Array.isArray(required) || !required.includes("none")) {
+      errors.push('Expected gecko.data_collection_permissions.required to include "none".');
+    }
   }
 
-  if (gecko.strict_min_version !== "128.0") {
+  if (gecko.strict_min_version !== "140.0") {
     errors.push(
-      `Expected gecko.strict_min_version to be "128.0", got "${gecko.strict_min_version ?? "undefined"}".`
+      `Expected gecko.strict_min_version to be "140.0", got "${gecko.strict_min_version ?? "undefined"}".`
     );
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "wiki-companion-for-openproject",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Firefox-first WebExtension to improve OpenProject wiki navigation behavior.",
   "private": true,
   "type": "module",
