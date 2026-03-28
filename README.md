@@ -58,6 +58,16 @@ This executes the repository build scripts in `scripts/` and produces:
 
 - `artifacts/wiki-companion-for-openproject-firefox-v<version>.zip`
 
+To regenerate the AMO source archive for the current version:
+
+```bash
+npm run package:source
+```
+
+This produces:
+
+- `artifacts/wiki-companion-for-openproject-source-v<version>.zip`
+
 Optional local verification:
 
 ```bash
